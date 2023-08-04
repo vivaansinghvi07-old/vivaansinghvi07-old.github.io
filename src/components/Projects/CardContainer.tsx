@@ -58,6 +58,7 @@ export default class CardContainer extends React.Component<any, any> {
       let imgPath: string = `/images/projects/${project.repo}.png`;
       cards.push(
         <Card
+          key={project.repo}
           title={project.title}
           tags={project.tags}
           repo={repo}

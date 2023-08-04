@@ -12,6 +12,8 @@ type CardProps = {
 };
 
 export default function Card(props: CardProps): JSX.Element {
+
+  // produce image for website, if applicable
   let website;
   if (props.website) {
     website = (
@@ -28,7 +30,7 @@ export default function Card(props: CardProps): JSX.Element {
   } else {
     website = <></>;
   }
-
+  
   return (
     <>
       <div className="Card">
@@ -40,7 +42,7 @@ export default function Card(props: CardProps): JSX.Element {
           />
         </div>
         <div className="Card-header">{props.title}</div>
-        <p className="Card-desc">{props.desc}</p>
+        <p className="Card-desc" dangerouslySetInnerHTML={ { __html: props.desc} }/>
         {website}
         <a href={props.repo} target="_blank" className="Card-link-repo">
           <img
@@ -49,7 +51,7 @@ export default function Card(props: CardProps): JSX.Element {
             alt="GitHub"
           ></img>
         </a>
-        <div className="Card-tags">
+        <div className="Card-tags" style={ { width: props.website ? '60%' : '70%'} }>
           {props.tags.map((item, index) => (
             <div
               key={index}

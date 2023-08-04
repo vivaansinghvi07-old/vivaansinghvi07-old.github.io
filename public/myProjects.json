@@ -1,0 +1,20 @@
+{
+    "projects": [
+        {
+            "title": "MandelPlot",
+            "repo": "mandelplot",
+            "website": "GH_PAGES",
+            "tags": ["math", "website", "favorites"],
+            "desc": "A fully interactive, beautiful visualizer of the Mandelbrot Set. Built using HTML/CSS/JS, powered by Web Workers.",
+            "color": "green"
+        },
+        {
+            "title": "AP Statistics Website",
+            "repo": "ap-statistics-website",
+            "website": "https://vivaans-statistics-site.000webhostapp.com/index.php",
+            "tags": ["math", "website", "favorites"],
+            "desc": "A complementary website for AP Statistics, equipped with pages of notes and a calculator for each major concept.",
+            "color": "rgb(50, 125, 150)"
+        }
+    ]
+}

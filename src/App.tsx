@@ -1,6 +1,6 @@
 import React from "react";
 import Projects from "./components/Projects";
-import { Route, Routes, HashRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 function Hello() {
   return <p>Hello world!</p>
@@ -9,12 +9,12 @@ function Hello() {
 function App() {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Hello />} />
           <Route path="/projects" element={<Projects />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }

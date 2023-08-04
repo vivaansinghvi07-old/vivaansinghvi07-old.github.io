@@ -1,61 +1,35 @@
-import React from "react";
 import Card from "./Card";
+import { useSharedTags } from "../../hooks/Projects/useSharedTags";
+import projects from "./MyProjects";
 import "./CardContainer.css";
 
-type ProjectData = {
-  title: string;
-  desc: string;
-  website: string;
-  repo: string;
-  tags: Array<string>;
-  color: string;
-};
+export default function CardContainer() {
 
-type ProjectContainerData = {
-  projects: Array<ProjectData>;
-};
+  const { tags } = useSharedTags();
 
-export default class CardContainer extends React.Component<any, any> {
-  constructor(props: object) {
-    super(props);
-    this.state = { data: undefined };
-  }
-
-  componentDidMount() {
-    this.getData().then((data) => this.setState({ data }));
-  }
-
-  async getData() {
-    let output: ProjectContainerData | undefined = undefined;
-    await fetch("/myProjects.json")
-      .then((response) => response.text())
-      .then((data) => {
-        output = JSON.parse(data);
-      });
-    return output;
-  }
-
-  render() {
-    // handle any errors or happenstances
-    if (!this.state.data) {
-      return (
-        <>
-          <div className="CardContainer-state">Loading...</div>
-        </>
-      );
+  // get the projects
+  const cards = new Array<JSX.Element>();
+  for (let project of projects) {
+    // get the website
+    let website: string;
+    if (project.website === "GH_PAGES") {
+      website = `https://vivaansinghvi07.github.io/${project.repo}`;
+    } else {
+      website = project.website;
     }
 
-    // get the projects
-    let cards = new Array<JSX.Element>();
-    for (let project of this.state.data.projects) {
-      let website: string;
-      if (project.website === "GH_PAGES") {
-        website = `https://vivaansinghvi07.github.io/${project.repo}`;
-      } else {
-        website = project.website;
-      }
-      let repo: string = `https://github.com/vivaansinghvi07/${project.repo}`;
-      let imgPath: string = `/images/projects/${project.repo}.png`;
+    // configure links
+    const repo: string = `https://github.com/vivaansinghvi07/${project.repo}`;
+    const imgPath: string = `/images/projects/${project.repo}.png`;
+
+    // determine if it matches the filters
+    let passedFilter: boolean = true;
+    for (let tag of tags) {
+      passedFilter &&= project.tags.includes(tag);
+    }
+
+    // add to the thing
+    if (passedFilter) {
       cards.push(
         <Card
           key={project.repo}
@@ -69,12 +43,12 @@ export default class CardContainer extends React.Component<any, any> {
         />
       );
     }
-
-    // render
-    return (
-      <>
-        <div className="CardContainer">{cards}</div>
-      </>
-    );
   }
+
+  // render
+  return (
+    <>
+      <div className="CardContainer">{cards}</div>
+    </>
+  );
 }

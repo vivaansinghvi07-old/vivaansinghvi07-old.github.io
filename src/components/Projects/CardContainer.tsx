@@ -4,7 +4,6 @@ import projects from "./MyProjects";
 import "./CardContainer.css";
 
 export default function CardContainer() {
-
   const { tags } = useSharedTags();
 
   // get the projects

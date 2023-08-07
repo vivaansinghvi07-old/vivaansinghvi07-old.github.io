@@ -5,6 +5,11 @@
   height: auto;
 }
 
+.TagSearch-info {
+  margin: 20px 60px 0;
+  font-size: 1.1em;
+}
+
 .TagSearch-input-container {
   position: relative;
   margin-top: 20px;
@@ -21,9 +26,13 @@
   height: 100%;
 }
 
-.TagSearch-info {
-  margin: 20px 60px 0;
-  font-size: 1.1em;
+.TagSearch-AutoComplete {
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  z-index: 2;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .TagSearch-tag {

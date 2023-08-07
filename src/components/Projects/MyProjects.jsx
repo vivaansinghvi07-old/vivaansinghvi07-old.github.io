@@ -208,4 +208,15 @@ const projects = [
     color: ""
   }
 ];
+
+// determine unique tags
+const uniqueTags = new Set();
+for (let project of projects) {
+  for (let tag of project.tags) {
+    uniqueTags.add(tag);
+  }
+}
+const uniqueTagsArray = Array.from(uniqueTags);
+
 export default projects;
+export { uniqueTagsArray };

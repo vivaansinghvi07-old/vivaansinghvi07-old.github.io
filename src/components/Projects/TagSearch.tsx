@@ -23,8 +23,8 @@ function Tag(props: { tag: string }) {
 
 export default function TagSearch() {
   const { tags, setTags } = useSharedTags();
-  const [input, setInput] = useState("");
-  const [keyReleased, setKeyReleased] = useState(true);
+  const [ input, setInput ] = useState("");
+  const [ keyReleased, setKeyReleased ] = useState(true);
 
   let tagElements = new Array<JSX.Element>();
   for (let tag of tags) {
@@ -73,14 +73,17 @@ export default function TagSearch() {
       </p>
       <div className="TagSearch">
         {tagElements}
-        <Input
-          className="TagSearch-input"
-          onChange={onChange}
-          onKeyUp={onKeyUp}
-          onKeyDown={onKeyDown}
-          value={input}
-          placeholder="Add tag here..."
-        />
+        <div className="TagSearch-input-container">
+          <Input
+            className="TagSearch-input"
+            onChange={onChange}
+            onKeyUp={onKeyUp}
+            onKeyDown={onKeyDown}
+            value={input}
+            placeholder="Add tag here..."
+          />
+          { /* Add the search bar thing */}
+        </div>
       </div>
     </>
   );

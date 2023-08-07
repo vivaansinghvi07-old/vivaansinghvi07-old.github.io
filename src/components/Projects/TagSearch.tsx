@@ -69,7 +69,11 @@ export default function TagSearch() {
     setShowAutoComplete(Boolean(newValue));
   }
 
-  function AutoCompleteItem(props: { tag: string, highCond: boolean, num: number}) {
+  function AutoCompleteItem(props: {
+    tag: string;
+    highCond: boolean;
+    num: number;
+  }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (

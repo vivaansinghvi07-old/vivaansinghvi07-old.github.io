@@ -23,22 +23,20 @@ function Tag(props: { tag: string }) {
 
 export default function TagSearch() {
   const { tags, setTags } = useSharedTags();
-  const [ input, setInput ] = useState("");
-  const [ keyReleased, setKeyReleased ] = useState(true);
+  const [input, setInput] = useState("");
+  const [keyReleased, setKeyReleased] = useState(true);
+  const [showAutoComplete, setShowAutoComplete] = useState(false);
 
   let tagElements = new Array<JSX.Element>();
   for (let tag of tags) {
     tagElements.push(<Tag tag={tag} />);
   }
 
-  // handle input changing
-  function onChange(event: any) {
-    setInput(event.target.value.trim());
-  }
-
-  // handle the key going up
-  function onKeyUp() {
-    setKeyReleased(true);
+  // check if user enters the input field
+  function onFocus() {
+    if (input) {
+      setShowAutoComplete(true);
+    }
   }
 
   // handle the main input
@@ -76,13 +74,21 @@ export default function TagSearch() {
         <div className="TagSearch-input-container">
           <Input
             className="TagSearch-input"
-            onChange={onChange}
-            onKeyUp={onKeyUp}
+            onChange={(event) => {
+              setInput(event.target.value.trim());
+            }}
+            onKeyUp={() => {
+              setKeyReleased(true);
+            }}
             onKeyDown={onKeyDown}
+            onfocus={onFocus}
+            onBlur={() => {
+              setShowAutoComplete(false);
+            }}
             value={input}
             placeholder="Add tag here..."
           />
-          { /* Add the search bar thing */}
+          {/* Add the search bar thing */}
         </div>
       </div>
     </>

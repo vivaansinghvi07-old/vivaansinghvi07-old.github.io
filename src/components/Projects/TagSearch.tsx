@@ -67,6 +67,7 @@ export default function TagSearch() {
     const newValue = event.target.value.trim();
     setInput(event.target.value.trim());
     setShowAutoComplete(Boolean(newValue));
+    setAutoCompleteNum(0);
   }
 
   function AutoCompleteItem(props: {
@@ -97,7 +98,7 @@ export default function TagSearch() {
         }}
         style={
           props.highCond || (!autoCompleteArrowNav && isHovered)
-            ? { backgroundColor: "rgb(225, 225, 225)" }
+            ? { backgroundColor: "rgb(225, 225, 225)", cursor: "pointer"}
             : {}
         }
       >
@@ -150,9 +151,10 @@ export default function TagSearch() {
   return (
     <>
       <p className="TagSearch-info">
-        Enter tags below, seperated by a comma, space, tab, or enter. You can
-        also click on the tags in the cards to add the to the filter. To delete
-        tags, use backspace in the input or simply click on the tags.
+        Enter tags below, seperated by a comma or space. Use your mouse or arrow
+        keys (not both) to navigate the suggestions pop-up, and hit enter or
+        click to select the highlighted tag. Click tags on cards to add them to
+        the filter. To delete tags, use backspace below or click on the tags.
       </p>
       <div className="TagSearch">
         {tagElements}

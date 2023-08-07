@@ -1,12 +1,11 @@
 .Card {
   position: relative;
-  margin: 50px 0 0 60px;
+  margin: 30px;
   width: 370px;
-  height: 480px;
+  aspect-ratio: 370 / 480;
   box-shadow: 1px 2px 9px gray;
   border-radius: 10% / 7%;
   overflow: hidden;
-  display: inline-block;
 }
 
 .Card-image-container {
@@ -36,12 +35,6 @@
   top: 57%;
   left: 10%;
   width: 80%;
-}
-
-.Card-tag-item:hover {
-  background-color: rgb(200, 200, 200);
-  color: black;
-  cursor: pointer;
 }
 
 .Card-footer-container {
@@ -76,6 +69,12 @@
   white-space: nowrap;
   font-size: 0.82em;
   display: inline-block;
+}
+
+.Card-tag-item:hover {
+  background-color: rgb(200, 200, 200);
+  color: black;
+  cursor: pointer;
 }
 
 .Card-link-repo {

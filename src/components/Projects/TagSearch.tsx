@@ -66,6 +66,11 @@ export default function TagSearch() {
 
   return (
     <>
+      <p className="TagSearch-info">
+        Enter tags below, seperated by a comma, space, tab, or enter. You can
+        also click on the tags in the cards to add the to the filter. To delete
+        tags, use backspace in the input or simply click on the tags.
+      </p>
       <div className="TagSearch">
         {tagElements}
         <Input

@@ -30,17 +30,12 @@ export default function TagSearch() {
   const [showAutoComplete, setShowAutoComplete] = useState(Boolean(input));
   const [autoCompleteNum, setAutoCompleteNum] = useState(0);
   const [autoCompleteArrowNav, setAutoCompleteArrowNav] = useState(true);
+  const [autoCompleteFocus, setAutoCompleteFocus] = useState(false);
+  const [inputFocus, setInputFocus] = useState(false);
 
   let tagElements = new Array<JSX.Element>();
   for (let tag of tags) {
     tagElements.push(<Tag tag={tag} />);
-  }
-
-  // check if user enters the input field
-  function onFocus() {
-    if (input) {
-      setShowAutoComplete(true);
-    }
   }
 
   // handle the main input
@@ -98,7 +93,7 @@ export default function TagSearch() {
         }}
         style={
           props.highCond || (!autoCompleteArrowNav && isHovered)
-            ? { backgroundColor: "rgb(225, 225, 225)", cursor: "pointer"}
+            ? { backgroundColor: "rgb(225, 225, 225)", cursor: "pointer" }
             : {}
         }
       >
@@ -127,26 +122,33 @@ export default function TagSearch() {
 
   // manage navigation for autocompletes
   useKeyDown(() => {
-    setAutoCompleteArrowNav(true);
-    setAutoCompleteNum(
-      (((autoCompleteNum - 1) % autoCompletes.length) + autoCompletes.length) %
-        autoCompletes.length
-    );
+    if (showAutoComplete) {
+      setAutoCompleteArrowNav(true);
+      setAutoCompleteNum(
+        (((autoCompleteNum - 1) % autoCompletes.length) +
+          autoCompletes.length) %
+          autoCompletes.length
+      );
+    }
   }, ["ArrowUp"]);
   useKeyDown(() => {
-    setAutoCompleteArrowNav(true);
-    setAutoCompleteNum((autoCompleteNum + 1) % autoCompletes.length);
+    if (showAutoComplete) {
+      setAutoCompleteArrowNav(true);
+      setAutoCompleteNum((autoCompleteNum + 1) % autoCompletes.length);
+    }
   }, ["ArrowDown"]);
 
   // enter the autocomplete and reset everything
   useKeyDown(() => {
-    if (!tags.includes(autoCompleteLabels[autoCompleteNum])) {
-      setTags([...tags, autoCompleteLabels[autoCompleteNum]]);
+    if (showAutoComplete) {
+      if (!tags.includes(autoCompleteLabels[autoCompleteNum])) {
+        setTags([...tags, autoCompleteLabels[autoCompleteNum]]);
+      }
+      setInput("");
+      setAutoCompleteNum(0);
+      setShowAutoComplete(false);
     }
-    setInput("");
-    setAutoCompleteNum(0);
-    setShowAutoComplete(false);
-  }, ["Enter"]);
+  }, ["Enter", "Tab"]);
 
   return (
     <>
@@ -166,7 +168,18 @@ export default function TagSearch() {
               setKeyReleased(true);
             }}
             onKeyDown={onKeyDown}
-            onFocus={onFocus}
+            onFocus={() => {
+              setInputFocus(true);
+              if (input) {
+                setShowAutoComplete(true);
+              }
+            }}
+            onBlur={() => {
+              setInputFocus(false);
+              if (!autoCompleteFocus) {
+                setShowAutoComplete(false);
+              }
+            }}
             value={input}
             style={
               showAutoComplete
@@ -176,7 +189,15 @@ export default function TagSearch() {
             placeholder="Add tag here..."
           />
           {showAutoComplete && (
-            <ListGroup className="TagSearch-AutoComplete">
+            <ListGroup
+              className="TagSearch-AutoComplete"
+              onBlur={() => {
+                setAutoCompleteFocus(false);
+                if (!inputFocus) {
+                  setShowAutoComplete(false);
+                }
+              }}
+            >
               {autoCompletes}
             </ListGroup>
           )}

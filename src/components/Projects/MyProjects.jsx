@@ -160,7 +160,7 @@ const projects = [
     color: ""
   },
   {
-    title: "Encrytion",
+    title: "Encryption",
     repo: "encryption",
     website: "",
     tags: ["algorithm", "python"],
@@ -205,6 +205,22 @@ const projects = [
     website: "",
     tags: ["fractals", "math", "python"],
     desc: "Generates <a href=\"https://en.wikipedia.org/wiki/Misiurewicz_point\" target=\"_blank\">Misiurewicz Points</a> for the Mandelbrot Set.",
+    color: ""
+  },
+  {
+    title: "Typing Test",
+    repo: "typing-test",
+    website: "",
+    tags: ["game", "terminal", "python"],
+    desc: "A typing test that features dynamic color changing, accuracy scores, and timers, all from the terminal.",
+    color: "rgb(0, 175, 0)"
+  },
+  {
+    title: "AI Essay Dataset",
+    repo: "ai-essay-dataset",
+    website: "https://www.kaggle.com/datasets/vivaansinghvi07/ai-generated-essays",
+    tags: ["ai", "dataset", "python"],
+    desc: "A dataset of nearly 3,000 essays all written using OpenAI's <code>text-davinci-003</code> model.",
     color: ""
   }
 ];

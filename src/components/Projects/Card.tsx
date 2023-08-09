@@ -9,6 +9,7 @@ type CardProps = {
   repo: string;
   tags: Array<string>;
   tagColor: string;
+  date: string;
 };
 
 function Tag(props: { tag: string; tagColor: string }) {
@@ -69,6 +70,7 @@ export default function Card(props: CardProps): JSX.Element {
             alt={`${props.title} example image`}
           />
         </div>
+        {props.date && <div className="Card-date">{props.date}</div>}
         <div className="Card-header">{props.title}</div>
         <p
           className="Card-desc"

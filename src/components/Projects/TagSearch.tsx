@@ -1,8 +1,17 @@
 import { useSharedTags } from "../../hooks/Projects/useSharedTags";
+import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
 import { useKeyDown } from "../../hooks/useKeyDown";
 import { useState } from "react";
 import { uniqueTagsArray } from "./MyProjects";
-import { Input, ListGroup, ListGroupItem } from "reactstrap";
+import {
+  Input,
+  ListGroup,
+  ListGroupItem,
+  Dropdown,
+  DropdownItem,
+  DropdownToggle,
+  DropdownMenu
+} from "reactstrap";
 import "./TagSearch.css";
 
 function Tag(props: { tag: string }) {
@@ -25,6 +34,7 @@ function Tag(props: { tag: string }) {
 
 export default function TagSearch() {
   const { tags, setTags } = useSharedTags();
+  const { setSortOrder } = useSharedSortOrder();
   const [input, setInput] = useState("");
   const [keyReleased, setKeyReleased] = useState(true);
   const [showAutoComplete, setShowAutoComplete] = useState(Boolean(input));
@@ -32,6 +42,7 @@ export default function TagSearch() {
   const [autoCompleteArrowNav, setAutoCompleteArrowNav] = useState(true);
   const [autoCompleteFocus, setAutoCompleteFocus] = useState(false);
   const [inputFocus, setInputFocus] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   let tagElements = new Array<JSX.Element>();
   for (let tag of tags) {
@@ -201,6 +212,24 @@ export default function TagSearch() {
               {autoCompletes}
             </ListGroup>
           )}
+        </div>
+        <div className="TagSearch-order">
+          <Dropdown
+            isOpen={dropdownOpen}
+            toggle={() => {
+              setDropdownOpen(!dropdownOpen);
+            }}
+            style={{width: "100%"}}
+          >
+            <DropdownToggle style={{width: "100%"}}>
+              Display Style
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem onClick={() => {setSortOrder("old")}}>Oldest</DropdownItem>
+              <DropdownItem onClick={() => {setSortOrder("new")}}>Recent</DropdownItem>
+              <DropdownItem onClick={() => {setSortOrder("alph")}}>Alphabetical</DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
         </div>
       </div>
     </>

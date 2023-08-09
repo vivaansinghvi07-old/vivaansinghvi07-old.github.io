@@ -52,3 +52,10 @@
   cursor: pointer;
   text-decoration: line-through;
 }
+
+.TagSearch-order {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 40px;
+  width: 150px;
+}

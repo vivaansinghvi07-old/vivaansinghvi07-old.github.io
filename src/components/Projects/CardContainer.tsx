@@ -1,14 +1,40 @@
 import Card from "./Card";
+import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
 import { useSharedTags } from "../../hooks/Projects/useSharedTags";
-import projects from "./MyProjects";
+import projects, { projectsNewToOld, projectsOldToNew, projectsAlphabetical } from "./MyProjects";
 import "./CardContainer.css";
+
+type projectType = {
+  title: string,
+  desc: string,
+  color: string,
+  tags: Array<string>,
+  repo: string,
+  website: string,
+  date: string
+}
 
 export default function CardContainer() {
   const { tags } = useSharedTags();
+  const { sortOrder } = useSharedSortOrder();
+  let projectArray: Array<projectType>;
+  switch(sortOrder) {
+    case "":
+      projectArray = projects;
+      break;
+    case "old":
+      projectArray = projectsNewToOld;
+      break;
+    case "new":
+      projectArray = projectsOldToNew;
+      break;
+    case "alph":
+      projectArray = projectsAlphabetical;
+  }
 
   // get the projects
   const cards = new Array<JSX.Element>();
-  for (let project of projects) {
+  for (let project of projectArray!) {
     // get the website
     let website: string;
     if (project.website === "GH_PAGES") {
@@ -39,6 +65,7 @@ export default function CardContainer() {
           website={website}
           imgPath={imgPath}
           tagColor={project.color}
+          date={project.date}
         />
       );
     }

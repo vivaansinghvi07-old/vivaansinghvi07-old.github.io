@@ -1,4 +1,6 @@
 import "./Card.css";
+import $ from 'jquery';
+import { useEffect } from "react";
 import { useSharedTags } from "../../hooks/Projects/useSharedTags";
 
 type CardProps = {
@@ -38,27 +40,22 @@ function Tag(props: { tag: string; tagColor: string }) {
 }
 
 export default function Card(props: CardProps): JSX.Element {
-  // produce image for website, if applicable
-  let website;
-  if (props.website) {
-    website = (
-      <>
-        <a href={props.website} target="_blank" className="Card-link-website">
-          <img
-            src="/images/website.png"
-            className="Card-link-image"
-            alt="Website"
-          ></img>
-        </a>
-      </>
-    );
-  } else {
-    website = <></>;
+
+  // adjust all the font sizes for clean resizing
+  function fitTexts() {
+    const em = $(".Card").width()! / 23.125;
+    $(".Card-desc").css("font-size", 1 * em);
+    $(".Card-header").css("font-size", 2 * em);
+    $(".Card-tags").css("font-size", 1 * em);
+    $(".Card-tag-item").css("font-size", 0.82 * em);
+    if (props.date) {
+      $(".Card-date").css("font-size", 1 * em);
+    }
   }
 
-  const tags = props.tags.map((item) => (
-    <Tag tag={item} tagColor={props.tagColor} />
-  ));
+  // scale font sizes depending on device
+  useEffect(fitTexts, []);
+  $( window ).resize(fitTexts);
 
   return (
     <>
@@ -72,7 +69,7 @@ export default function Card(props: CardProps): JSX.Element {
         </div>
         {props.date && <div className="Card-date">{props.date}</div>}
         <div className="Card-header">{props.title}</div>
-        <p
+        <div
           className="Card-desc"
           dangerouslySetInnerHTML={{ __html: props.desc }}
         />
@@ -81,9 +78,23 @@ export default function Card(props: CardProps): JSX.Element {
             className="Card-tags"
             style={{ width: props.website ? "60%" : "70%" }}
           >
-            {tags}
+            {props.tags.map((item) => (
+              <Tag tag={item} key={item} tagColor={props.tagColor} />
+            ))}
           </div>
-          {website}
+          {props.website && (
+            <a
+              href={props.website}
+              target="_blank"
+              className="Card-link-website"
+            >
+              <img
+                src="/images/website.png"
+                className="Card-link-image"
+                alt="Website"
+              ></img>
+            </a>
+          )}
           <a href={props.repo} target="_blank" className="Card-link-repo">
             <img
               src="/images/github.png"

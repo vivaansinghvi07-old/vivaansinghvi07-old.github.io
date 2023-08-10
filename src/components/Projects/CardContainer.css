@@ -1,7 +1,7 @@
 .CardContainer {
   width: auto;
   height: auto;
-  margin: 0px 0px 50px 25px;
+  margin: 0px 25px 50px 25px;
   display: flex;
   flex-wrap: wrap;
 }

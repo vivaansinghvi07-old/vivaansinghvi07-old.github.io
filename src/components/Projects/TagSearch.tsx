@@ -94,7 +94,7 @@ export default function TagSearch() {
         onMouseLeave={() => {
           setIsHovered(false);
         }}
-        onClick={() => {
+        onMouseUp={() => {
           if (!tags.includes(props.tag)) {
             setTags([...tags, props.tag]);
           }
@@ -207,6 +207,9 @@ export default function TagSearch() {
                 if (!inputFocus) {
                   setShowAutoComplete(false);
                 }
+              }}
+              onMouseEnter={() => {
+                setAutoCompleteFocus(true);
               }}
             >
               {autoCompletes}

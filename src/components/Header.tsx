@@ -29,6 +29,9 @@ export default function Header() {
             <NavItem>
               <NavLink href="/projects">Projects</NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href="/aboutme">About Me</NavLink>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>

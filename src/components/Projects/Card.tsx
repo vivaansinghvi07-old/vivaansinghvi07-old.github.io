@@ -1,5 +1,5 @@
 import "./Card.css";
-import $ from 'jquery';
+import $ from "jquery";
 import { useEffect } from "react";
 import { useSharedTags } from "../../hooks/Projects/useSharedTags";
 
@@ -17,21 +17,19 @@ type CardProps = {
 function Tag(props: { tag: string; tagColor: string }) {
   const { tags, setTags } = useSharedTags();
 
-  function addTag() {
-    if (!tags.includes(props.tag)) {
-      const tagsCopy = [...tags];
-      tagsCopy.push(props.tag);
-      setTags(tagsCopy);
-    }
-  }
-
   return (
     <>
       <div
         key={props.tag}
         className="Card-tag-item"
         style={{ boxShadow: `1px 2px 3px ${props.tagColor}` }}
-        onClick={addTag}
+        onClick={() => {
+          if (!tags.includes(props.tag)) {
+            const tagsCopy = [...tags];
+            tagsCopy.push(props.tag);
+            setTags(tagsCopy);
+          }
+        }}
       >
         {props.tag}
       </div>
@@ -40,7 +38,6 @@ function Tag(props: { tag: string; tagColor: string }) {
 }
 
 export default function Card(props: CardProps): JSX.Element {
-
   // adjust all the font sizes for clean resizing
   function fitTexts() {
     const em = $(".Card").width()! / 23.125;
@@ -55,7 +52,7 @@ export default function Card(props: CardProps): JSX.Element {
 
   // scale font sizes depending on device
   useEffect(fitTexts, []);
-  $( window ).resize(fitTexts);
+  $(window).on("resize", fitTexts);
 
   return (
     <>

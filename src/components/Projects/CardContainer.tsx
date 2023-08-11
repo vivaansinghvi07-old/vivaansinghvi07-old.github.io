@@ -5,7 +5,6 @@ import { useSharedTags } from "../../hooks/Projects/useSharedTags";
 import projects, { projectsNewToOld, projectsOldToNew, projectsAlphabetical } from "./MyProjects";
 import "./CardContainer.css";
 import { useEffect } from "react";
-import { randomInt } from "crypto";
 
 type projectType = {
   title: string,

@@ -76,4 +76,5 @@
   width: 150px;
   margin: 20px 20px 0px 0px;
   animation: fade-in 2s forwards;
+  z-index: 2;
 }

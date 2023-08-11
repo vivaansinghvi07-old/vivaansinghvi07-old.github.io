@@ -81,7 +81,7 @@ export default function CardContainer() {
   // render
   return (
     <>
-      <div className="CardContainer before">{cards}</div>
+      <div className="CardContainer">{cards}</div>
     </>
   );
 }

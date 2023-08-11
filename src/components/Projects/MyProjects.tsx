@@ -1,4 +1,14 @@
-const projects = [
+type ProjectArrayType = Array<{
+  title: string,
+  repo: string,
+  website: string,
+  tags: Array<string>,
+  desc: string,
+  color: string, 
+  date: string
+}>
+
+const projects: ProjectArrayType = [
   {
     title: "MandelPlot",
     repo: "mandelplot",
@@ -378,16 +388,16 @@ const projects = [
 ];
 
 // determine unique tags
-const uniqueTags = new Set();
+const uniqueTags: Set<string> = new Set();
 for (let project of projects) {
   for (let tag of project.tags) {
     uniqueTags.add(tag);
   }
 }
-const uniqueTagsArray = Array.from(uniqueTags);
+const uniqueTagsArray: Array<string> = Array.from(uniqueTags);
 
 // determine sorted by date
-var projectsSortedByDate = [...projects].sort((a, b) => {
+var projectsSortedByDate: ProjectArrayType = [...projects].sort((a, b) => {
 
   // check for blank
   if (!a.date && !b.date) {
@@ -406,18 +416,18 @@ var projectsSortedByDate = [...projects].sort((a, b) => {
     if (aDate[idx] === bDate[idx]) {
       continue;
     }
-    return (aDate[idx] < bDate[idx]) * 2 - 1;
+    return Number(aDate[idx] < bDate[idx]) * 2 - 1;
   }
   return 0;
 });
 
 // reverse accordingly
-const projectsOldToNew = [...projectsSortedByDate];
+const projectsOldToNew: ProjectArrayType = [...projectsSortedByDate];
 projectsSortedByDate.reverse()
-const projectsNewToOld = [...projectsSortedByDate];
+const projectsNewToOld: ProjectArrayType = [...projectsSortedByDate];
 
 // sort alphabetically
-const projectsAlphabetical = [...projects].sort((a, b) => {
+const projectsAlphabetical: ProjectArrayType = [...projects].sort((a, b) => {
   if (a.title < b.title) {
     return -1;
   } else {

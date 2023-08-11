@@ -1,7 +1,7 @@
 import { useSharedTags } from "../../hooks/Projects/useSharedTags";
 import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
 import { useKeyDown } from "../../hooks/useKeyDown";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { uniqueTagsArray } from "./MyProjects";
 import {
   Input,
@@ -12,6 +12,7 @@ import {
   DropdownToggle,
   DropdownMenu,
 } from "reactstrap";
+import $ from "jquery";
 import "./TagSearch.css";
 
 function Tag(props: { tag: string }) {

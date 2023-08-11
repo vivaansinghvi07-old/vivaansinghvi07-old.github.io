@@ -1,6 +1,6 @@
 .Card {
   position: relative;
-  margin: 30px;
+  margin: min(5vw, 30px);
   width: 370px;
   aspect-ratio: 370 / 480;
   box-shadow: 1px 2px 9px gray;

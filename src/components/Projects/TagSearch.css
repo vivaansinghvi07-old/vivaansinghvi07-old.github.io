@@ -1,3 +1,13 @@
+@keyframes slide-left {
+  0% { left: -200%; }
+  100% { left: 0 }
+}
+
+@keyframes fade-in {
+  0% { opacity: 0% }
+  100% { opacity: 100% }
+}
+
 .TagSearch {
   margin: 0px 60px;
   display: flex;
@@ -8,11 +18,12 @@
 .TagSearch-info {
   margin: 20px 60px 0;
   font-size: 1.1em;
+  animation: fade-in 2s forwards;
 }
 
 .TagSearch-input-container {
   position: relative;
-  margin-top: 20px;
+  margin: 20px 20px 0px 0px;
   min-width: 200px;
   max-width: 100%;
   flex: 1 1 100px;
@@ -24,6 +35,8 @@
   top: 0;
   left: 0;
   height: 100%;
+  transition: all 2s;
+  animation: slide-left 2s forwards;
 }
 
 .TagSearch-AutoComplete {
@@ -33,6 +46,11 @@
   z-index: 2;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.TagSearch-AutoComplete-item:hover {
+  background-color: rgb(225, 225, 225);
+  cursor: pointer;
 }
 
 .TagSearch-tag {
@@ -56,10 +74,6 @@
 .TagSearch-order {
   height: 40px;
   width: 150px;
-  margin: 20px 20px 0px;
-}
-
-.TagSearch-AutoComplete-item:hover {
-  background-color: rgb(225, 225, 225);
-  cursor: pointer;
+  margin: 20px 20px 0px 0px;
+  animation: fade-in 2s forwards;
 }

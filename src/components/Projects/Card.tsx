@@ -44,7 +44,7 @@ export default function Card(props: CardProps): JSX.Element {
     $(".Card-desc").css("font-size", 1 * em);
     $(".Card-header").css("font-size", 2 * em);
     $(".Card-tags").css("font-size", 1 * em);
-    $(".Card-tag-item").css("font-size", 0.82 * em);
+    $(".Card-tag-item").css("font-size", 0.8 * em);
     if (props.date) {
       $(".Card-date").css("font-size", 1 * em);
     }

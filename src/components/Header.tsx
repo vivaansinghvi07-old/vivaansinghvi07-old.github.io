@@ -27,10 +27,10 @@ export default function Header() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/projects">Projects</NavLink>
+              <NavLink href="/aboutme">About Me</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/aboutme">About Me</NavLink>
+              <NavLink href="/projects">Projects</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

@@ -1,8 +1,10 @@
 import Card from "./Card";
+import $ from "jquery";
 import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
 import { useSharedTags } from "../../hooks/Projects/useSharedTags";
 import projects, { projectsNewToOld, projectsOldToNew, projectsAlphabetical } from "./MyProjects";
 import "./CardContainer.css";
+import { useEffect } from "react";
 
 type projectType = {
   title: string,
@@ -71,10 +73,15 @@ export default function CardContainer() {
     }
   }
 
+  // render the coming up
+  useEffect(() => {
+    $(".CardContainer").removeClass("before");
+  }, []);
+
   // render
   return (
     <>
-      <div className="CardContainer">{cards}</div>
+      <div className="CardContainer before">{cards}</div>
     </>
   );
 }

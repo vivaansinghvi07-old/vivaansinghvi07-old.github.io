@@ -58,3 +58,8 @@
   width: 150px;
   margin: 20px 20px 0px;
 }
+
+.TagSearch-AutoComplete-item:hover {
+  background-color: rgb(225, 225, 225);
+  cursor: pointer;
+}

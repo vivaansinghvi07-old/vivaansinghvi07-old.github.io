@@ -10,7 +10,7 @@ import {
   Dropdown,
   DropdownItem,
   DropdownToggle,
-  DropdownMenu
+  DropdownMenu,
 } from "reactstrap";
 import "./TagSearch.css";
 
@@ -39,7 +39,6 @@ export default function TagSearch() {
   const [keyReleased, setKeyReleased] = useState(true);
   const [showAutoComplete, setShowAutoComplete] = useState(Boolean(input));
   const [autoCompleteNum, setAutoCompleteNum] = useState(0);
-  const [autoCompleteArrowNav, setAutoCompleteArrowNav] = useState(true);
   const [autoCompleteFocus, setAutoCompleteFocus] = useState(false);
   const [inputFocus, setInputFocus] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -76,24 +75,10 @@ export default function TagSearch() {
     setAutoCompleteNum(0);
   }
 
-  function AutoCompleteItem(props: {
-    tag: string;
-    highCond: boolean;
-    num: number;
-  }) {
-    const [isHovered, setIsHovered] = useState(false);
-
+  function AutoCompleteItem(props: { tag: string; highBlue: boolean }) {
     return (
       <ListGroupItem
         className="TagSearch-AutoComplete-item"
-        onMouseEnter={() => {
-          setIsHovered(true);
-          setAutoCompleteNum(props.num);
-          setAutoCompleteArrowNav(false);
-        }}
-        onMouseLeave={() => {
-          setIsHovered(false);
-        }}
         onMouseUp={() => {
           if (!tags.includes(props.tag)) {
             setTags([...tags, props.tag]);
@@ -103,8 +88,8 @@ export default function TagSearch() {
           setShowAutoComplete(false);
         }}
         style={
-          props.highCond || (!autoCompleteArrowNav && isHovered)
-            ? { backgroundColor: "rgb(225, 225, 225)", cursor: "pointer" }
+          props.highBlue
+            ? { backgroundColor: "rgb(2, 110, 230)", color: "rgb(255, 255, 255)" }
             : {}
         }
       >
@@ -121,10 +106,7 @@ export default function TagSearch() {
       autoCompletes.push(
         <AutoCompleteItem
           tag={tag}
-          num={autoCompletes.length}
-          highCond={
-            autoCompletes.length === autoCompleteNum && autoCompleteArrowNav
-          }
+          highBlue={autoCompletes.length === autoCompleteNum}
         />
       );
       autoCompleteLabels.push(tag);
@@ -134,7 +116,6 @@ export default function TagSearch() {
   // manage navigation for autocompletes
   useKeyDown(() => {
     if (showAutoComplete) {
-      setAutoCompleteArrowNav(true);
       setAutoCompleteNum(
         (((autoCompleteNum - 1) % autoCompletes.length) +
           autoCompletes.length) %
@@ -144,7 +125,6 @@ export default function TagSearch() {
   }, ["ArrowUp"]);
   useKeyDown(() => {
     if (showAutoComplete) {
-      setAutoCompleteArrowNav(true);
       setAutoCompleteNum((autoCompleteNum + 1) % autoCompletes.length);
     }
   }, ["ArrowDown"]);
@@ -202,7 +182,7 @@ export default function TagSearch() {
           {showAutoComplete && (
             <ListGroup
               className="TagSearch-AutoComplete"
-              onBlur={() => {
+              onMouseLeave={() => {
                 setAutoCompleteFocus(false);
                 if (!inputFocus) {
                   setShowAutoComplete(false);
@@ -222,15 +202,33 @@ export default function TagSearch() {
             toggle={() => {
               setDropdownOpen(!dropdownOpen);
             }}
-            style={{width: "100%"}}
+            style={{ width: "100%" }}
           >
-            <DropdownToggle style={{width: "100%"}}>
+            <DropdownToggle style={{ width: "100%" }}>
               Display Style
             </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem onClick={() => {setSortOrder("old")}}>Oldest</DropdownItem>
-              <DropdownItem onClick={() => {setSortOrder("new")}}>Recent</DropdownItem>
-              <DropdownItem onClick={() => {setSortOrder("alph")}}>Alphabetical</DropdownItem>
+              <DropdownItem
+                onClick={() => {
+                  setSortOrder("old");
+                }}
+              >
+                Oldest
+              </DropdownItem>
+              <DropdownItem
+                onClick={() => {
+                  setSortOrder("new");
+                }}
+              >
+                Recent
+              </DropdownItem>
+              <DropdownItem
+                onClick={() => {
+                  setSortOrder("alph");
+                }}
+              >
+                Alphabetical
+              </DropdownItem>
             </DropdownMenu>
           </Dropdown>
         </div>

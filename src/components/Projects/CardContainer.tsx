@@ -5,6 +5,7 @@ import { useSharedTags } from "../../hooks/Projects/useSharedTags";
 import projects, { projectsNewToOld, projectsOldToNew, projectsAlphabetical } from "./MyProjects";
 import "./CardContainer.css";
 import { useEffect } from "react";
+import { randomInt } from "crypto";
 
 type projectType = {
   title: string,
@@ -59,7 +60,7 @@ export default function CardContainer() {
     if (passedFilter) {
       cards.push(
         <Card
-          key={project.repo}
+          key={Math.random()}
           repo={project.repo}
           title={project.title}
           tags={project.tags}

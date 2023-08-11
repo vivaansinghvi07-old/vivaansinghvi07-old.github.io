@@ -1,13 +1,7 @@
-@keyframes slide-down {
-  0% { margin-top: 100% }
-  100% { margin-top: 0 } 
-}
-
 .CardContainer {
   width: auto;
   height: auto;
   margin: 0px 25px 50px 25px;
   display: flex;
   flex-wrap: wrap;
-  animation: slide-down 2s forwards;
 }

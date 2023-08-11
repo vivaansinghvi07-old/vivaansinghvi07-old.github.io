@@ -60,14 +60,16 @@ export default function CardContainer() {
       cards.push(
         <Card
           key={project.repo}
+          repo={project.repo}
           title={project.title}
           tags={project.tags}
-          repo={repo}
+          repoSite={repo}
           desc={project.desc}
           website={website}
           imgPath={imgPath}
           tagColor={project.color}
           date={project.date}
+          animateWait={cards.length * 100}
         />
       );
     }

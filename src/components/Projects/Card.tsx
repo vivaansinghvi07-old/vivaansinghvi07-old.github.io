@@ -9,9 +9,11 @@ type CardProps = {
   desc: string;
   website: string;
   repo: string;
+  repoSite: string;
   tags: Array<string>;
   tagColor: string;
   date: string;
+  animateWait: number;
 };
 
 function Tag(props: { tag: string; tagColor: string }) {
@@ -54,9 +56,16 @@ export default function Card(props: CardProps): JSX.Element {
   useEffect(fitTexts, []);
   $(window).on("resize", fitTexts);
 
+  // do animation
+  useEffect(() => {
+    setTimeout( () => {
+      $(`.Card#${props.repo}`).removeClass("before");
+    }, props.animateWait);
+  }, []);
+
   return (
     <>
-      <div className="Card">
+      <div className="Card before" id={props.repo}>
         <div className="Card-image-container">
           <img
             className="Card-image"
@@ -92,7 +101,7 @@ export default function Card(props: CardProps): JSX.Element {
               ></img>
             </a>
           )}
-          <a href={props.repo} target="_blank" className="Card-link-repo">
+          <a href={props.repoSite} target="_blank" className="Card-link-repo">
             <img
               src="/images/github.png"
               className="Card-link-image"

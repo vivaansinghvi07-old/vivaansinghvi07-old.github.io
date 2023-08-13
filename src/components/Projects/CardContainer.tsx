@@ -79,11 +79,6 @@ export default function CardContainer() {
     }
   }
 
-  // render the coming up
-  useEffect(() => {
-    $(".CardContainer").removeClass("before");
-  }, []);
-
   // render
   return (
     <>

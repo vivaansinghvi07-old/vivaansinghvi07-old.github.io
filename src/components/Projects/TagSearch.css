@@ -9,7 +9,7 @@
 }
 
 .TagSearch {
-  margin: 0px 60px;
+  margin: 0px 60px 10px;
   display: flex;
   flex-wrap: wrap;
   height: auto;
@@ -18,7 +18,7 @@
 .TagSearch-info {
   margin: 20px 60px 0;
   font-size: 1.1em;
-  animation: fade-in 2s forwards;
+  animation: fade-in 1.5s forwards;
 }
 
 .TagSearch-input-container {
@@ -36,7 +36,7 @@
   left: 0;
   height: 100%;
   transition: all 2s;
-  animation: slide-left 2s forwards;
+  animation: slide-left 1.5s forwards;
 }
 
 .TagSearch-AutoComplete {

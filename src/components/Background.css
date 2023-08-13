@@ -1,0 +1,21 @@
+@keyframes ltr-slide {
+    from {
+        right: 100vw;
+    }
+    to {
+        left: 100vw;
+    }
+}
+
+.Background-cloud {
+    position: absolute;
+    left: -400px;
+    top: 0px;
+}
+
+.Background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}

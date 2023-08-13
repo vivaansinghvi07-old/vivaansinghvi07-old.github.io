@@ -31,6 +31,11 @@ function Tag(props: { tag: string; tagColor: string }) {
             tagsCopy.push(props.tag);
             setTags(tagsCopy);
           }
+          window.scroll({
+            top: 0, 
+            left: 0, 
+            behavior: 'smooth'
+          });
         }}
       >
         {props.tag}

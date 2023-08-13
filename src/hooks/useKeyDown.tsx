@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-export const useKeyDown = (callback, keys) => {
-  const onKeyDown = (event) => {
+export const useKeyDown = (callback: Function, keys: Array<string>) => {
+  const onKeyDown = (event: KeyboardEvent) => {
     const wasAnyKeyPressed = keys.some((key) => event.key === key);
     if (wasAnyKeyPressed) {
       event.preventDefault();

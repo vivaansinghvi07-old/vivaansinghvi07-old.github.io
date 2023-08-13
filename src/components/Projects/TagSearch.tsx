@@ -89,7 +89,10 @@ export default function TagSearch() {
         }}
         style={
           props.highBlue
-            ? { backgroundColor: "rgb(2, 110, 230)", color: "rgb(255, 255, 255)" }
+            ? {
+                backgroundColor: "rgb(2, 110, 230)",
+                color: "rgb(255, 255, 255)",
+              }
             : {}
         }
       >

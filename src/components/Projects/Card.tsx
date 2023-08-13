@@ -58,7 +58,7 @@ export default function Card(props: CardProps): JSX.Element {
 
   // do animation
   useEffect(() => {
-    setTimeout( () => {
+    setTimeout(() => {
       $(`.Card#${props.repo}`).removeClass("before");
     }, props.animateWait);
   }, []);

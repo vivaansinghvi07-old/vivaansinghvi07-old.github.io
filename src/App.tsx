@@ -3,7 +3,7 @@ import Projects from "./components/Projects";
 import AboutMe from "./components/AboutMe";
 import { Route, Routes } from "react-router-dom";
 import Background from "./components/Background";
-import "./App.css"
+import "./App.css";
 
 function App() {
   return (

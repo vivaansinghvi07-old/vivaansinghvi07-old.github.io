@@ -2,25 +2,29 @@ import Card from "./Card";
 import $ from "jquery";
 import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
 import { useSharedTags } from "../../hooks/Projects/useSharedTags";
-import projects, { projectsNewToOld, projectsOldToNew, projectsAlphabetical } from "./MyProjects";
+import projects, {
+  projectsNewToOld,
+  projectsOldToNew,
+  projectsAlphabetical,
+} from "./MyProjects";
 import "./CardContainer.css";
 import { useEffect } from "react";
 
 type projectType = {
-  title: string,
-  desc: string,
-  color: string,
-  tags: Array<string>,
-  repo: string,
-  website: string,
-  date: string
-}
+  title: string;
+  desc: string;
+  color: string;
+  tags: Array<string>;
+  repo: string;
+  website: string;
+  date: string;
+};
 
 export default function CardContainer() {
   const { tags } = useSharedTags();
   const { sortOrder } = useSharedSortOrder();
   let projectArray: Array<projectType>;
-  switch(sortOrder) {
+  switch (sortOrder) {
     case "":
       projectArray = projects;
       break;

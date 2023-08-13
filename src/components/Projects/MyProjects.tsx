@@ -1,12 +1,12 @@
 type ProjectArrayType = Array<{
-  title: string,
-  repo: string,
-  website: string,
-  tags: Array<string>,
-  desc: string,
-  color: string, 
-  date: string
-}>
+  title: string;
+  repo: string;
+  website: string;
+  tags: Array<string>;
+  desc: string;
+  color: string;
+  date: string;
+}>;
 
 const projects: ProjectArrayType = [
   {
@@ -398,7 +398,6 @@ const uniqueTagsArray: Array<string> = Array.from(uniqueTags);
 
 // determine sorted by date
 var projectsSortedByDate: ProjectArrayType = [...projects].sort((a, b) => {
-
   // check for blank
   if (!a.date && !b.date) {
     return 0;
@@ -409,8 +408,8 @@ var projectsSortedByDate: ProjectArrayType = [...projects].sort((a, b) => {
   }
 
   // get dates
-  let aDate = a.date.split('-');
-  let bDate = b.date.split('-');
+  let aDate = a.date.split("-");
+  let bDate = b.date.split("-");
 
   for (let idx of [2, 0, 1]) {
     if (aDate[idx] === bDate[idx]) {
@@ -423,7 +422,7 @@ var projectsSortedByDate: ProjectArrayType = [...projects].sort((a, b) => {
 
 // reverse accordingly
 const projectsOldToNew: ProjectArrayType = [...projectsSortedByDate];
-projectsSortedByDate.reverse()
+projectsSortedByDate.reverse();
 const projectsNewToOld: ProjectArrayType = [...projectsSortedByDate];
 
 // sort alphabetically
@@ -433,7 +432,12 @@ const projectsAlphabetical: ProjectArrayType = [...projects].sort((a, b) => {
   } else {
     return 1;
   }
-})
+});
 
 export default projects;
-export { uniqueTagsArray, projectsOldToNew, projectsNewToOld, projectsAlphabetical};
+export {
+  uniqueTagsArray,
+  projectsOldToNew,
+  projectsNewToOld,
+  projectsAlphabetical,
+};

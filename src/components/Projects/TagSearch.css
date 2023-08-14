@@ -16,7 +16,7 @@
 }
 
 .TagSearch-info {
-  margin: 20px 60px 0;
+  margin: 75px 60px 0;
   font-size: 1.1em;
   animation: fade-in 1.5s forwards;
 }
@@ -43,7 +43,7 @@
   width: 100%;
   position: absolute;
   top: 40px;
-  z-index: 2;
+  z-index: 3;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }

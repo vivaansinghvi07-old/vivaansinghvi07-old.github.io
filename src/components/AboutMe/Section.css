@@ -1,0 +1,44 @@
+.Section {
+  position: relative;
+  opacity: 90%;
+  width: 80%;
+  padding: 2.5% 5%;
+  margin: 5vh auto;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.Section-header {
+  text-align: center;
+  width: 100%;
+  font-size: 2em;
+}
+
+.Section-SingleEvent {
+  font-size: 1.1em;
+  list-style-type: none;
+}
+
+.Section-SingleEvent-dropdown {
+  height: 1.1em;
+  width: auto;
+  margin-right: 0.5em;
+  rotate: 270deg;
+  opacity: 80%;
+  transition: all 0.25s;
+}
+
+.Section-SingleEvent-dropdown.down {
+  rotate: 360deg;
+}
+
+.Section-SingleEvent-extrainfo {
+  font-size: 0.9em;
+  margin-left: 2em;
+  height: auto;
+  overflow: hidden;
+}
+
+.Section-SingleEvent-extrainfo.hide {
+  height: 0px;
+}

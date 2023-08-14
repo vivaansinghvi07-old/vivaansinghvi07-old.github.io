@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <>
-      <Navbar color="dark" dark expand="md">
+      <Navbar color="dark" dark expand="md" fixed="top">
         <NavbarBrand style={{ marginLeft: "10px" }} href="/">
           Vivaan Singhvi
         </NavbarBrand>

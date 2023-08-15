@@ -1,0 +1,40 @@
+.AboutMe-SideSection {
+  position: relative;
+  opacity: 90%;
+  width: 80%;
+  height: 500px;
+  padding: 2.5% 5%;
+  text-align: center;
+  margin: 5vh auto;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.AboutMe-SideSection-fixed {
+  position: fixed;
+  width: 30%;
+  height: auto;
+  margin-top: 65px;
+}
+
+.AboutMe-rest {
+  position: fixed;
+  width: 83%;
+  left: 22%;
+  margin-top: 65px;
+}
+
+.AboutMe-SideSection-LangList {
+  position: relative;
+  width: 90%;
+  max-width: 300px;
+  margin: 0px auto;
+}
+
+.AboutMe-SideSection-MyPicture {
+  position: relative;
+  background-color: black;
+  border-radius: 100%;
+  width: 90%;
+  aspect-ratio: 1 / 1;
+}

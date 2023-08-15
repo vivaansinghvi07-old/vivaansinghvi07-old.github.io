@@ -1,8 +1,8 @@
-import "./Section.css";
+import "./ListSection.css";
 import $ from "jquery";
 import { awards, affiliations } from "./MyData";
 
-type SectionProps = {
+type ListSectionProps = {
   title: string;
 };
 
@@ -16,18 +16,18 @@ type SingleEventProps = {
 function SingleEvent(props: SingleEventProps) {
   return (
     <>
-      <div className="Section-SingleEvent">
+      <div className="ListSection-SingleEvent">
         <img
-          className="Section-SingleEvent-dropdown"
+          className="ListSection-SingleEvent-dropdown"
           id={props.id}
           src="/images/dropdown.png"
           onClick={() => {
-            $(`.Section-SingleEvent-dropdown#${props.id}`).toggleClass("down");
-            $(`.Section-SingleEvent-extrainfo#${props.id}`).toggleClass("hide");
+            $(`.ListSection-SingleEvent-dropdown#${props.id}`).toggleClass("down");
+            $(`.ListSection-SingleEvent-extrainfo#${props.id}`).toggleClass("hide");
           }}
         />
         {props.title}
-        <div className="Section-SingleEvent-extrainfo hide" id={props.id}>
+        <div className="ListSection-SingleEvent-extrainfo hide" id={props.id}>
           <strong>{props.date}:</strong>
           &ensp;
           {props.desc}
@@ -37,7 +37,7 @@ function SingleEvent(props: SingleEventProps) {
   );
 }
 
-export default function Section(props: SectionProps) {
+export default function ListSection(props: ListSectionProps) {
   const data = new Array<JSX.Element>();
   const emojis = ["🏆", "🥇", "🥈", "🥉"];
 
@@ -71,8 +71,8 @@ export default function Section(props: SectionProps) {
 
   return (
     <>
-      <div className="Section">
-        <h1 className="Section-header">{props.title}</h1>
+      <div className="ListSection">
+        <h1 className="ListSection-header">{props.title}</h1>
         {data}
       </div>
     </>

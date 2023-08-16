@@ -2,8 +2,8 @@
   position: relative;
   opacity: 90%;
   width: 80%;
-  height: 500px;
-  padding: 2.5% 5%;
+  height: auto;
+  padding: 5% 5%;
   text-align: center;
   margin: 5vh auto;
   background-color: white;
@@ -24,17 +24,51 @@
   margin-top: 65px;
 }
 
-.AboutMe-SideSection-LangList {
+.AboutMe-SideSection-langlist {
   position: relative;
   width: 90%;
   max-width: 300px;
   margin: 0px auto;
 }
 
-.AboutMe-SideSection-MyPicture {
+.AboutMe-SideSection-picture {
   position: relative;
-  background-color: black;
+  overflow: hidden;
   border-radius: 100%;
   width: 90%;
   aspect-ratio: 1 / 1;
+  margin: 0px auto 30px;
+  max-width: 200px;
+}
+
+.AboutMe-SideSection-story {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.AboutMe-SideSection-download {
+  padding: 2.5%;
+  background-color: rgb(225, 225, 225);
+  border-radius: 10px;
+  color: black;
+  margin: 0px 10px;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.AboutMe-SideSection-download:hover {
+  box-shadow: 1px 2px 3px black;
+  background-color: rgb(210, 210, 210);
+}
+
+.AboutMe-SideSection-link-container {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+
+.AboutMe-SideSection-link {
+  width: 13%;
+  height: auto;
+  margin: 0px 10px;
 }

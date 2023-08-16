@@ -22,8 +22,12 @@ function SingleEvent(props: SingleEventProps) {
           id={props.id}
           src="/images/dropdown.png"
           onClick={() => {
-            $(`.ListSection-SingleEvent-dropdown#${props.id}`).toggleClass("down");
-            $(`.ListSection-SingleEvent-extrainfo#${props.id}`).toggleClass("hide");
+            $(`.ListSection-SingleEvent-dropdown#${props.id}`).toggleClass(
+              "down"
+            );
+            $(`.ListSection-SingleEvent-extrainfo#${props.id}`).toggleClass(
+              "hide"
+            );
           }}
         />
         {props.title}

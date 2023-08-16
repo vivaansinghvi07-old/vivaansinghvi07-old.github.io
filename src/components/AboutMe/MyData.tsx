@@ -85,13 +85,13 @@ const affiliations: Array<{
   {
     title: "National Honors Society",
     desc: "Volunteered about thirty hours over two years in various projects and events.",
-    date: "2021-2023"
+    date: "2021-2023",
   },
   {
     title: "Second Harvest Food Bank",
     desc: "Volunteered about seventy hours, working in food packaging for donation to pantries across East Tennessee.",
-    date: "2021-2023"
-  }
+    date: "2021-2023",
+  },
 ];
 
 export { awards, affiliations };

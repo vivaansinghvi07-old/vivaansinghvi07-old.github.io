@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./AboutMe.css";
+import $ from "jquery";
 import ListSection from "./AboutMe/ListSection";
 
 export default function AboutMe() {
@@ -8,6 +9,30 @@ export default function AboutMe() {
   window.onresize = () => {
     setWindowWidth(window.innerWidth);
   };
+
+  const langListPop = (
+    <>
+      <div
+        className="AboutMe-SideSection-langlist-toggler"
+        onClick={() => {
+          const button = $(".AboutMe-SideSection-langlist-button");
+          const langs = $(".AboutMe-SideSection-langlist-fixed");
+          button.toggleClass("open");
+          langs.toggleClass("show");
+        }}
+      >
+        Toggle Languages
+        <img
+          className="AboutMe-SideSection-langlist-button"
+          src="/images/dropdown.png"
+        />
+      </div>
+      <img
+          className="AboutMe-SideSection-langlist-fixed"
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=vivaansinghvi07&layout=compact&langs_count=20&size_weight=0.30&count_weight=0.5&exclude_repo=ap-statistics-website"
+        />
+    </>
+  );
 
   const sideSection = (
     <>
@@ -41,16 +66,19 @@ export default function AboutMe() {
             />
           </a>
         </div>
+        {!(window.innerHeight > 950 || window.innerWidth < 1200) && langListPop}
         <p className="AboutMe-SideSection-story">
           My name is Vivaan Singhvi. I am 16 years old (assuming this is
           updated), and am passionate about computer science and math. I love
           creating personal projects such as this one, listening to music, and
           spending time with the people close to me.
         </p>
-        <img
-          className="AboutMe-SideSection-langlist"
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=vivaansinghvi07&layout=compact&langs_count=20&size_weight=0.30&count_weight=0.5&exclude_repo=ap-statistics-website"
-        />
+        {(window.innerHeight > 950 || window.innerWidth < 1200) && (
+          <img
+            className="AboutMe-SideSection-langlist"
+            src="https://github-readme-stats.vercel.app/api/top-langs/?username=vivaansinghvi07&layout=compact&langs_count=20&size_weight=0.30&count_weight=0.5&exclude_repo=ap-statistics-website"
+          />
+        )}
       </div>
     </>
   );
@@ -65,7 +93,7 @@ export default function AboutMe() {
   if (windowWidth < 1200) {
     return (
       <>
-        <div style={{ marginTop: "75px" }}>
+        <div style={{ marginTop: "80px" }}>
           {sideSection}
           {listSectionData}
         </div>
@@ -74,8 +102,8 @@ export default function AboutMe() {
   } else {
     return (
       <>
-        <div className="AboutMe-SideSection-fixed">{sideSection}</div>
         <div className="AboutMe-rest">{listSectionData}</div>
+        <div className="AboutMe-SideSection-fixed">{sideSection}</div>
       </>
     );
   }

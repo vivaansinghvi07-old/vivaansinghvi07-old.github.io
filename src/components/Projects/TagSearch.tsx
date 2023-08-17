@@ -1,18 +1,18 @@
-import { useSharedTags } from "../../hooks/Projects/useSharedTags";
-import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
-import { useKeyDown } from "../../hooks/useKeyDown";
-import { useState } from "react";
-import { uniqueTagsArray } from "./MyProjects";
 import {
   Input,
-  ListGroup,
-  ListGroupItem,
   Dropdown,
+  ListGroup,
   DropdownItem,
-  DropdownToggle,
   DropdownMenu,
+  ListGroupItem,
+  DropdownToggle,
 } from "reactstrap";
 import "./TagSearch.css";
+import { useState } from "react";
+import { uniqueTagsArray } from "./MyProjects";
+import { useKeyDown } from "../../hooks/useKeyDown";
+import { useSharedTags } from "../../hooks/Projects/useSharedTags";
+import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
 
 function Tag(props: { tag: string }) {
   const { tags, setTags } = useSharedTags();

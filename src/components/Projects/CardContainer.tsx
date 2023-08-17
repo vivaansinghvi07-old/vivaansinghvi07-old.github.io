@@ -1,14 +1,12 @@
-import Card from "./Card";
-import $ from "jquery";
-import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
-import { useSharedTags } from "../../hooks/Projects/useSharedTags";
 import projects, {
   projectsNewToOld,
   projectsOldToNew,
   projectsAlphabetical,
 } from "./MyProjects";
+import Card from "./Card";
 import "./CardContainer.css";
-import { useEffect } from "react";
+import { useSharedTags } from "../../hooks/Projects/useSharedTags";
+import { useSharedSortOrder } from "../../hooks/Projects/useSharedSortOrder";
 
 type projectType = {
   title: string;

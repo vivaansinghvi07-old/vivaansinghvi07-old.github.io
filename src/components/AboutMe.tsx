@@ -1,6 +1,6 @@
-import { useState } from "react";
 import "./AboutMe.css";
 import $ from "jquery";
+import { useState } from "react";
 import ListSection from "./AboutMe/ListSection";
 
 export default function AboutMe() {

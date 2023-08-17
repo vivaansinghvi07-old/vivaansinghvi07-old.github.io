@@ -1,5 +1,5 @@
-import "./ListSection.css";
 import $ from "jquery";
+import "./ListSection.css";
 import { awards, affiliations } from "./MyData";
 
 type ListSectionProps = {

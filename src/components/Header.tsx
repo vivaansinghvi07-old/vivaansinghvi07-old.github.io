@@ -16,7 +16,8 @@ export default function Header() {
   return (
     <>
       <Navbar color="dark" dark expand="md" fixed="top">
-        <NavbarBrand style={{ marginLeft: "10px" }} href="/">
+        <NavbarBrand style={{ marginLeft: "10px", marginTop: "3px"}} href="/">
+          <img src="/images/logo.png" style={{ height: "30px", width: "auto", marginRight: "15px", marginBottom: "5px"}}/>
           Vivaan Singhvi
         </NavbarBrand>
         <NavbarToggler

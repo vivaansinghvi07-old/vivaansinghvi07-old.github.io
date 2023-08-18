@@ -1,4 +1,5 @@
 import "./AboutMe.css";
+import $ from "jquery";
 import { useState } from "react";
 import SideSection from "./AboutMe/SideSection";
 import ListSection from "./AboutMe/ListSection";
@@ -6,10 +7,10 @@ import ListSection from "./AboutMe/ListSection";
 export default function AboutMe() {
   // setup reloading when the window width changes
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  window.onresize = () => {
+  $(window).on("resize", () => {
     setWindowWidth(window.innerWidth);
-  };
-  
+  });
+
   const listSectionData = new Array<JSX.Element>();
   for (let title of [
     "Awards",

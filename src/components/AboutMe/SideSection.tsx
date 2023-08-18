@@ -1,18 +1,19 @@
 import "./SideSection.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function SideSection() {
+  // setup reloading when the window width changes
   const [dimensions, setDimensions] = useState({
     height: window.innerHeight,
     width: window.innerWidth,
   });
 
-  window.onresize = () => {
+  $(window).on("resize", () => {
     setDimensions({
       height: window.innerHeight,
       width: window.innerWidth,
     });
-  };
+  });
 
   const langListPop = (
     <>

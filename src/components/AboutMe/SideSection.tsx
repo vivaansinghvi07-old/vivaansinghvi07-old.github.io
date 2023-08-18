@@ -1,4 +1,5 @@
 import "./SideSection.css";
+import $ from "jquery";
 import { useState } from "react";
 
 export default function SideSection() {

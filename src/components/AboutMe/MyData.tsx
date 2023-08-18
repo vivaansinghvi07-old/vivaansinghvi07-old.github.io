@@ -92,6 +92,74 @@ const affiliations: Array<{
     desc: "Volunteered about seventy hours, working in food packaging for donation to pantries across East Tennessee.",
     date: "2021-2023",
   },
+  {
+    title: "Mu Alpha Theta",
+    desc: "Competed in several math competitions such as Rocket City Math League, TMTA, and MAO.",
+    date: "2021-2023",
+  },
+  {
+    title: "Farragut High School Science Club",
+    desc: "Attended weekly presentations about various topics in science and participated in competitions like Science Olympiad.",
+    date: "2021-2023",
+  },
+  {
+    title: "Oak Ridge National Laboratory",
+    desc: "Participated in an internship, and attended about a dozen seminars and workshops during my time.",
+    date: "Jun-Jul 2023",
+  },
+  {
+    title: "Knoxville Academy of Music",
+    desc: "Further developed drumming skills (total 9 years experience) weekly.",
+    date: "2023",
+  },
+  {
+    title: "Health Occupations Students of America",
+    desc: "Competed in fast-paced tests, twice state-level and once internationally. Attended various immersive workshops and volunteered for the club.",
+    date: "2021-2023",
+  },
 ];
 
-export { awards, affiliations };
+const educationAndExperience: Array<{
+  title: string;
+  desc: string;
+  date: string;
+}> = [
+  {
+    title: "Oak Ridge National Laboratory Internship",
+    desc: "Worked in database administration, developing skills in PostgreSQL and getting valuable workplace experience.",
+    date: "Jun-Jul 2023",
+  },
+  {
+    title: "Farragut High School",
+    desc: "GPA: 4.00/4.72 UW/W, Relevant Coursework: AP Statistics (5), AP Calculus AB/BC (5), AP Research (4), AP Physics 1 (5), AP Chemistry (5), AP Biology (5), AP German, AP Computer Science A (Self-Studied - 5)",
+    date: "2020-2024",
+  },
+];
+
+const hobbies: Array<{
+  title: string;
+  desc: string;
+}> = [
+  {
+    title: "💻 Programming",
+    desc: 'I like programming all sorts of things, like image processing, data science, games, or websites! See the <a href="/projects" target="_blank">Projects</a> section of this site for examples!',
+  },
+  {
+    title: "🥁 Drumming",
+    desc: "I've been playing the drumset for about nine years now, and have played in dozens of performances. I especially enjoy drumming alongside my favorite songs.",
+  },
+  {
+    title: "🧩 Cubing",
+    desc: "I enjoy solving Rubix Cubes; my favorites are the 3x3 and 7x7 (which I broke). I have about 25 different puzzles (half of which aren't even cuboidal), one of which I made: my penguin cube.",
+  },
+  {
+    title: "🚲 Working Out",
+    desc: "Whether it be going to the gym, biking, or even just doing pushups at home, I value physical activity and try to get some every day.",
+  },
+  {
+    title: "🎮 Gaming",
+    desc: 'I\'ve played many video games in my life, but my favorite has been <a href="https://www.rocketleague.com/" target="_blank">Rocket League</a>, a game in which rocket-powered cars play soccer.',
+  },
+];
+
+export { awards, affiliations, educationAndExperience, hobbies };

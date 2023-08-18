@@ -6,6 +6,12 @@
   margin: 5vh auto;
   background-color: white;
   border-radius: 30px;
+  transition: all 0.75s;
+  cursor: pointer;
+}
+
+.ListSection.before {
+  margin-top: 100%;
 }
 
 .ListSection-header {

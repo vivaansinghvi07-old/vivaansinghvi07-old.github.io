@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import MainPage from "./components/MainPage";
 import Projects from "./components/Projects";
 import AboutMe from "./components/AboutMe";
 import { Route, Routes } from "react-router-dom";
@@ -11,7 +12,7 @@ function App() {
       <Background />
       <Header />
       <Routes>
-        <Route path="/" element={<div>Hello</div>} />
+        <Route path="/" element={<MainPage />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/aboutme" element={<AboutMe />} />
       </Routes>

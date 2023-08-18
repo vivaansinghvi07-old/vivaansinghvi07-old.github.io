@@ -1,0 +1,48 @@
+.MainPage {
+    margin: 15vh 10vw 0px;
+    width: 80vw;
+    opacity: 85%;
+}
+
+.MainPage-text-container {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.MainPage-name {
+    font-size: max(50px, 8vw);
+}
+
+.MainPage-desc {
+    margin-top: 40px;
+    font-size: max(1em, 1.5vw);
+}
+
+.MainPage-page-container {
+    position: relative;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.MainPage-page {
+    position: relative;
+    font-size: max(1.5em, 2vw);
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    width: fit-content;
+    text-decoration: none;
+    color: rgb(55, 61, 67);
+    transition: all 0.5s;
+    margin: 10px 30px;
+}
+
+.MainPage-page:hover {
+    box-shadow: 1px 2px 9px black;
+}

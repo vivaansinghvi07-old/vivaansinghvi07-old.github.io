@@ -13,9 +13,9 @@ export default function AboutMe() {
 
   const listSectionData = new Array<JSX.Element>();
   for (let title of [
+    "Education and Experience",
     "Awards",
     "Affiliations",
-    "Education and Experience",
     "Hobbies",
   ]) {
     listSectionData.push(

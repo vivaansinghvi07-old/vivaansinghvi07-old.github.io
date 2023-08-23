@@ -7,7 +7,6 @@
   background-color: white;
   border-radius: 30px;
   transition: all 0.75s;
-  cursor: pointer;
 }
 
 .ListSection.before {
@@ -32,6 +31,7 @@
   rotate: 270deg;
   opacity: 80%;
   transition: all 0.25s;
+  cursor: pointer;
 }
 
 .ListSection-SingleEvent-dropdown.down {

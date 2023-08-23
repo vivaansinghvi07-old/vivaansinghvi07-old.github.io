@@ -134,7 +134,7 @@ export default function TagSearch() {
 
   // enter the autocomplete and reset everything
   useKeyDown(() => {
-    if (showAutoComplete) {
+    if (showAutoComplete && autoCompleteLabels.length) {
       if (!tags.includes(autoCompleteLabels[autoCompleteNum])) {
         setTags([...tags, autoCompleteLabels[autoCompleteNum]]);
       }

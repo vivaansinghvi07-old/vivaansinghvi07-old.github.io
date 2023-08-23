@@ -53,6 +53,13 @@ export default function SideSection() {
         >
           <strong>View Resume</strong>
         </a>
+        <a
+          href="/assets/vita.pdf"
+          target="_blank"
+          className="SideSection-download"
+        >
+          <strong>View CV</strong>
+        </a>
         <div className="SideSection-link-container">
           <a href="https://github.com/vivaansinghvi07/" target="_blank">
             <img src="/images/github.png" className="SideSection-link" />

@@ -34,7 +34,7 @@ function SingleEvent(props: SingleEventProps) {
         <img
           className="ListSection-SingleEvent-dropdown"
           id={props.id}
-          src="/images/dropdown.png"
+          src="/assets/images/dropdown.png"
           onClick={() => {
             $(`.ListSection-SingleEvent-dropdown#${props.id}`).toggleClass(
               "down"

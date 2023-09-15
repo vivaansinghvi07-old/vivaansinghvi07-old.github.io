@@ -30,7 +30,7 @@ export default function SideSection() {
         Toggle Languages
         <img
           className="SideSection-langlist-button"
-          src="/images/dropdown.png"
+          src="/assets/images/dropdown.png"
         />
       </div>
       <img
@@ -44,7 +44,7 @@ export default function SideSection() {
     <>
       <div className="SideSection">
         <div className="SideSection-picture-wrapper">
-          <img className="SideSection-picture" src="/images/me.png" />
+          <img className="SideSection-picture" src="/assets/images/me.png" />
         </div>
         <a
           href="/assets/resume.pdf"
@@ -62,11 +62,11 @@ export default function SideSection() {
         </a>
         <div className="SideSection-link-container">
           <a href="https://github.com/vivaansinghvi07/" target="_blank">
-            <img src="/images/github.png" className="SideSection-link" />
+            <img src="/assets/images/github.png" className="SideSection-link" />
           </a>
           <a href="https://replit.com/@VIVAANSINGHVI" target="_blank">
             <img
-              src="/images/replit.png"
+              src="/assets/images/replit.png"
               style={{ filter: "grayscale(100%) brightness(0%)" }}
               className="SideSection-link"
             />
@@ -75,13 +75,13 @@ export default function SideSection() {
             href="https://www.linkedin.com/in/vivaan-singhvi-02525027a"
             target="_blank"
           >
-            <img src="/images/linkedin.png" className="SideSection-link" />
+            <img src="/assets/images/linkedin.png" className="SideSection-link" />
           </a>
           <a
             href="https://stackoverflow.com/users/21107707/vs07"
             target="_blank"
           >
-            <img src="/images/so.png" className="SideSection-link" />
+            <img src="/assets/images/so.png" className="SideSection-link" />
           </a>
         </div>
         {!(dimensions.height > 950 || dimensions.width < 1200) && langListPop}

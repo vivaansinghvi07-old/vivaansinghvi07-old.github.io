@@ -100,7 +100,7 @@ export default function Card(props: CardProps): JSX.Element {
               className="Card-link-website"
             >
               <img
-                src="/images/website.png"
+                src="/assets/images/website.png"
                 className="Card-link-image"
                 alt="Website"
               ></img>
@@ -108,7 +108,7 @@ export default function Card(props: CardProps): JSX.Element {
           )}
           <a href={props.repoSite} target="_blank" className="Card-link-repo">
             <img
-              src="/images/github.png"
+              src="/assets/images/github.png"
               className="Card-link-image"
               alt="GitHub"
             ></img>

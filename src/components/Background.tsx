@@ -10,7 +10,7 @@ function Cloud() {
     <>
       <img
         className="Background-cloud"
-        src={`/images/clouds/cloud${randInt(0, 12)}.png`}
+        src={`/assets/images/clouds/cloud${randInt(0, 12)}.png`}
         style={{
           top: `${randInt(-10, 90)}vh`,
           opacity: `${randInt(50, 100)}%`,

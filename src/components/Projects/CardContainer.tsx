@@ -49,7 +49,7 @@ export default function CardContainer() {
 
     // configure links
     const repo: string = `https://github.com/vivaansinghvi07/${project.repo}`;
-    const imgPath: string = `/images/projects/${project.repo}.png`;
+    const imgPath: string = `/assets/images/projects/${project.repo}.png`;
 
     // determine if it matches the filters
     let passedFilter: boolean = true;

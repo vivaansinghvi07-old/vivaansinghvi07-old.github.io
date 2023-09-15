@@ -36,7 +36,7 @@ const projects: ProjectArrayType = [
     date: "07-31-23"
   },
   {
-    title: "vivaansinghvi07.github.io",
+    title: "Personal Website",
     repo: "vivaansinghvi07.github.io",
     website: "https://vivaansinghvi07.github.io",
     tags: [
@@ -44,7 +44,7 @@ const projects: ProjectArrayType = [
         "react",
         "typescript"
     ],
-    desc: "This website!",
+    desc: "The code for this website, which was my introduction to the React library and TypeScript!",
     color: "rgb(50, 125, 150)",
     date: "08-23-23"
   },

@@ -10,6 +10,45 @@ type ProjectArrayType = Array<{
 
 const projects: ProjectArrayType = [
   {
+    title: "ViSeNet",
+    repo: "visenet",
+    website: "",
+    tags: [
+        "machine-learning",
+        "neural-network",
+        "computer-vision",
+        "python"
+    ],
+    desc: "My introduction to neural networks by building one for the purpose of video segmentation.",
+    color: "",
+    date: "08-29-23"
+  },
+  {
+    title: "Sound Experiments",
+    repo: "sound-experiments",
+    website: "",
+    tags: [
+        "sound-processing",
+        "python"
+    ],
+    desc: "A project in which several different operations were applied to sound files to see what effects they would have.",
+    color: "orange",
+    date: "07-31-23"
+  },
+  {
+    title: "vivaansinghvi07.github.io",
+    repo: "vivaansinghvi07.github.io",
+    website: "https://vivaansinghvi07.github.io",
+    tags: [
+        "website",
+        "react",
+        "typescript"
+    ],
+    desc: "This website!",
+    color: "rgb(50, 125, 150)",
+    date: "08-23-23"
+  },
+  {
     title: "MandelPlot",
     repo: "mandelplot",
     website: "GH_PAGES",

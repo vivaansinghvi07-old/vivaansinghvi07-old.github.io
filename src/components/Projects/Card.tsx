@@ -57,6 +57,8 @@ export default function Card(props: CardProps): JSX.Element {
     }
   }
 
+  let id = props.repo.replaceAll('.', '-');
+
   // scale font sizes depending on device
   useEffect(fitTexts, []);
   $(window).on("resize", fitTexts);
@@ -64,13 +66,13 @@ export default function Card(props: CardProps): JSX.Element {
   // do animation
   useEffect(() => {
     setTimeout(() => {
-      $(`.Card#${props.repo}`).removeClass("before");
+      $(`.Card#${id}`).removeClass("before");
     }, props.animateWait);
   }, []);
 
   return (
     <>
-      <div className="Card before" id={props.repo}>
+      <div className="Card before" id={id}>
         <div className="Card-image-container">
           <img
             className="Card-image"

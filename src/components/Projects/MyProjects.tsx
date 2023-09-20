@@ -131,7 +131,7 @@ const projects: ProjectArrayType = [
     tags: ["python", "javascript"],
     desc: "A collection of my stupid project ideas, currently featuring a TicTacToe model, an Even/Odd function generator, and a Python Uglifier.",
     color: "",
-    date: "",
+    date: "08-15-23",
   },
   {
     title: "CodeForces",
@@ -149,7 +149,7 @@ const projects: ProjectArrayType = [
     tags: ["competitive-programming", "python"],
     desc: 'A collection of some solutions for the <a href="https://www.adventofcode.com/2022" target="_blank">Advent of Code 2022</a>, with the goal of using as few lines as possible.',
     color: "",
-    date: "",
+    date: "07-11-23",
   },
   {
     title: "Text to Desmos",
@@ -221,7 +221,7 @@ const projects: ProjectArrayType = [
     tags: ["database", "web-scraping", "python", "sql"],
     desc: "Stores a SQL database structure to hold information about soccer, using web scraping to gather data (work in progress).",
     color: "",
-    date: "",
+    date: "04-28-23",
   },
   {
     title: "Connect Four",
@@ -266,7 +266,7 @@ const projects: ProjectArrayType = [
     tags: ["machine-learning", "data-science", "python"],
     desc: "Uses cancer datasets to build predictive classifiers regarding the presence of malignant cancer in a person.",
     color: "",
-    date: "",
+    date: "04-12-23",
   },
   {
     title: "Stock Predictor",

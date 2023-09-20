@@ -1,4 +1,4 @@
-import projects, {
+import {
   projectsNewToOld,
   projectsOldToNew,
   projectsAlphabetical,
@@ -24,13 +24,11 @@ export default function CardContainer() {
   let projectArray: Array<projectType>;
   switch (sortOrder) {
     case "":
-      projectArray = projects;
+    case "new":
+      projectArray = projectsOldToNew;
       break;
     case "old":
       projectArray = projectsNewToOld;
-      break;
-    case "new":
-      projectArray = projectsOldToNew;
       break;
     case "alph":
       projectArray = projectsAlphabetical;

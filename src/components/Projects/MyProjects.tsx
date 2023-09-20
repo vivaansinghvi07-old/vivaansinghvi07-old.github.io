@@ -10,6 +10,22 @@ type ProjectArrayType = Array<{
 
 const projects: ProjectArrayType = [
   {
+    title: "Study++",
+    repo: "study-plus-plus",
+    website: "",
+    tags: [
+        "website",
+        "full-stack",
+        "ai",
+        "flask",
+        "python",
+        "javascript"
+    ],
+    desc: 'My first flask application: an AI-integrated homework helper with a JavaScript frontend and Python backend. Built with <a target="_blank" href="https://www.github.com/gracetic37">Grace Feng</a>.',
+    date: "09-11-23",
+    color: "black"
+  },
+  {
     title: "ViSeNet",
     repo: "visenet",
     website: "",
@@ -473,7 +489,6 @@ const projectsAlphabetical: ProjectArrayType = [...projects].sort((a, b) => {
   }
 });
 
-export default projects;
 export {
   uniqueTagsArray,
   projectsOldToNew,

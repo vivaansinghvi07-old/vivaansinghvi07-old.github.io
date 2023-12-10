@@ -12,7 +12,7 @@ const projects: ProjectArrayType = [
   {
     title: "Rubik's Cube Solver",
     repo: "rubix-cube-solver",
-    tags: ["computer-vision", "algorithm", "website", "websockets", "javascript", "python"],
+    tags: ["computer-vision", "website", "websockets", "javascript", "python"],
     website: "",
     desc: "A full-stack web application that uses computer vision to read a Rubik's cube from user video and generates a step-by-step solution.",
     date: "12-09-23",

@@ -12,10 +12,10 @@ function Cloud() {
         className="Background-cloud"
         src={`/assets/images/clouds/cloud${randInt(0, 12)}.png`}
         style={{
-          top: `${randInt(-10, 90)}vh`,
-          opacity: `${randInt(50, 100)}%`,
+       top: `${randInt(-10, 90)}vh`,
+      opacity: `${randInt(50, 100)}%`,
           animation: `${randInt(15, 30)}s ltr-slide forwards linear`,
-        }}
+     }}
       />
     </>
   );

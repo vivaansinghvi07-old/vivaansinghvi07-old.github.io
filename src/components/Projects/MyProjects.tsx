@@ -10,6 +10,24 @@ type ProjectArrayType = Array<{
 
 const projects: ProjectArrayType = [
   {
+    title: "Rubik's Cube Solver",
+    repo: "rubix-cube-solver",
+    tags: ["computer-vision", "algorithm", "website", "websockets", "javascript", "python"],
+    website: "",
+    desc: "A full-stack web application that uses computer vision to read a Rubik's cube from user video and generates a step-by-step solution.",
+    date: "12-09-23",
+    color: "black"
+  },
+  {
+    title: "PyCubing",
+    repo: "pycubing",
+    tags: ["library", "algorithm", "python"],
+    website: "https://pypi.org/project/pycubing/",
+    desc: "A Python package that models Rubik's cubes of any size with code, with a solver designed to mimik the way a human would solve the cube. Note: docs and tests to come.",
+    date: "11-03-23",
+    color: "orange"
+  },
+  {
     title: "Study++",
     repo: "study-plus-plus",
     website: "",

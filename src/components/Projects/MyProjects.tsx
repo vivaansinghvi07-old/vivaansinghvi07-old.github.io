@@ -10,6 +10,24 @@ type ProjectArrayType = Array<{
 
 const projects: ProjectArrayType = [
   {
+    title: "DreamBerd Interpreter",
+    repo: "dreamberd-interpreter",
+    tags: ["favorite", "interpreter", "python"],
+    date: "02-05-24",
+    desc: 'My biggest project up to date, an interpreter for the cursed programming language <a target="_blank" href="https://www.github.com/TodePond/DreamBerd">DreamBerd</a> by <a target="_blank" href="https://www.github.com/TodePond">Lu Wilson.</a>',
+    color: "black",
+    website: ""
+  },
+  {
+    title: "Particle Simulation",
+    repo: "atom-simulation",
+    tags: ["favorite", "simulation", "algorithm", "SDL", "c"],
+    website: "",
+    date: "12-28-23",
+    desc: "My first project in C, a particle simulation that explores different ways to approximate gravity between particles.",
+    color: "red"
+  },
+  {
     title: "Rubik's Cube Solver",
     repo: "rubix-cube-solver",
     tags: ["computer-vision", "website", "websockets", "javascript", "python"],

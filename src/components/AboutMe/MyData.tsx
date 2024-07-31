@@ -5,18 +5,6 @@ const awards: Array<{
   date: string;
 }> = [
   {
-    place: 1,
-    title: "Technology Student Association State Leadership Conference: Coding",
-    desc: "With a teammate, achieved the highest score on a combination of a preliminary test and on-site coding questions.",
-    date: "2024"
-  },
-  {
-    place: 1,
-    title: "Technology Student Association State Leadership Conference: Webmaster",
-    desc: 'Designed the CSS for the winning website (<a href="https://syleneenergy.github.io" target="_blank">here</a>), which was developed alongside three others.',
-    date: "2024"
-  },
-  {
     place: 0,
     title: "SMC Data Challenge",
     desc: "Solution paper accepted for the Smoky Mountains Computational Sciences Data Challenge Conference.",

@@ -1,7 +1,7 @@
 {
   "name": "app",
   "version": "0.1.0",
-  "homepage": "https://vivaansinghvi07.github.io",
+  "homepage": "https://vivaansinghvi07-old.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",

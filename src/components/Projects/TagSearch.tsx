@@ -208,7 +208,7 @@ export default function TagSearch() {
             style={{ width: "100%" }}
           >
             <DropdownToggle style={{ width: "100%" }}>
-              Display Style
+              Display Order
             </DropdownToggle>
             <DropdownMenu>
               <DropdownItem

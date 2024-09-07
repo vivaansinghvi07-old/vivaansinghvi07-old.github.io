@@ -10,6 +10,15 @@ type ProjectArrayType = Array<{
 
 const projects: ProjectArrayType = [
   {
+    title: "Bim",
+    repo: "bim",
+    tags: ["favorite", "c"],
+    date: "06-01-24",
+    desc: "A complex multimodal terminal-based text editor with many of the features of Vim, such as movement, macros, and many convenient text-editing functions.",
+    color: "magenta",
+    website: "",
+  },
+  {
     title: "DreamBerd Interpreter",
     repo: "dreamberd-interpreter",
     tags: ["favorite", "interpreter", "python"],
@@ -89,8 +98,8 @@ const projects: ProjectArrayType = [
   },
   {
     title: "Personal Website",
-    repo: "vivaansinghvi07.github.io",
-    website: "https://vivaansinghvi07.github.io",
+    repo: "old",
+    website: "https://vivaansinghvi07-old.github.io",
     tags: [
         "website",
         "react",
@@ -165,7 +174,7 @@ const projects: ProjectArrayType = [
     repo: "why",
     website: "GH_PAGES",
     tags: ["python", "javascript"],
-    desc: "A collection of my stupid project ideas, currently featuring a TicTacToe model, an Even/Odd function generator, and a Python Uglifier.",
+    desc: "A collection of small, unconventional project ideas, currently featuring a TicTacToe model, an Even/Odd function generator, and a Python Uglifier.",
     color: "",
     date: "08-15-23",
   },
@@ -427,8 +436,8 @@ const projects: ProjectArrayType = [
     repo: "checkers-bot",
     website: "",
     tags: ["game", "bot", "terminal", "java"],
-    desc: "A Java implementation of checkers for the terminal, where the player goes against a bot - granted, not a very good one.",
-    color: "",
+    color: "",    
+    desc: "A Java implementation of checkers for the terminal, where the player goes against a bot.",
     date: "01-19-23",
   },
   {

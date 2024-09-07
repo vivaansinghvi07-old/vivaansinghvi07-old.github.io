@@ -137,14 +137,14 @@ const educationAndExperience: Array<{
   date: string;
 }> = [
   {
-    title: "Oak Ridge National Laboratory Internship",
-    desc: "Worked in database administration, developing skills in PostgreSQL and getting valuable workplace experience.",
-    date: "Jun-Jul 2023",
+    title: "Oak Ridge National Laboratory Internship: Adversarial Detection",
+    desc: "Developed a complex system to detect adversarial images using the Fourier Transform, and developed a deep understanding of how neural networks work.",
+    date: "Jun-Jul 2024",
   },
   {
-    title: "Farragut High School",
-    desc: "GPA: 4.00/4.72 UW/W, Relevant Coursework: AP Statistics (5), AP Calculus AB/BC (5), AP Research (4), AP Physics 1 (5), AP Chemistry (5), AP Biology (5), AP German, AP Computer Science A (Self-Studied - 5)",
-    date: "2020-2024",
+    title: "Oak Ridge National Laboratory Internship: Database Administration",
+    desc: "Worked in database administration, developing skills in PostgreSQL and getting valuable workplace experience.",
+    date: "Jun-Jul 2023",
   },
 ];
 

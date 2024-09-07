@@ -85,7 +85,7 @@ export default function ListSection(props: ListSectionProps) {
         );
       }
       break;
-    case "Education and Experience":
+    case "Experience":
       for (let exp of educationAndExperience) {
         data.push(
           <SingleEvent

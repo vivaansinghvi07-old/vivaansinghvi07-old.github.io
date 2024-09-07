@@ -9,7 +9,6 @@ import "./App.css";
 function App() {
   return (
     <>
-      <Background />
       <Header />
       <Routes>
         <Route path="/" element={<MainPage />} />

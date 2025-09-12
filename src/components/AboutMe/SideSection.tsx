@@ -86,9 +86,8 @@ export default function SideSection() {
         </div>
         {!(dimensions.height > 950 || dimensions.width < 1200) && langListPop}
         <p className="SideSection-story">
-          I am a 17-year-old undergraduate at the University of Michigan Ann Arbor
-          in a Computer Science Major at the College of LSA. I am passionate about 
-          all things programming and math. I love creating personal projects such 
+          I am an 18-year-old senior Computer Science Major at the University of Michigan.
+          I am passionate about all things programming and math. I love creating personal projects such 
           as this one, listening to music, weightlifting, and spending time with the people close to me.
         </p>
         {(dimensions.height > 950 || dimensions.width < 1200) && (

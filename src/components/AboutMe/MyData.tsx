@@ -137,7 +137,17 @@ const educationAndExperience: Array<{
   date: string;
 }> = [
   {
-    title: "Oak Ridge National Laboratory Internship: Adversarial Detection",
+    title: "Oak Ridge National Laboratory Internship: Attacking Object Detectors",
+    desc: "Engineered an end-to-end attack against object detection models, using 3D reconstruction to generate stickers that camoflague target objects from YOLO models.",
+    date: "May-Jul 2025",
+  },
+  {
+    title: "University of Michigan Undergraduate Research Assistantship",
+    desc: "Optimized phylogenetic reconstruction for digital evolution, achieving over 100-fold speedup and better asymptotic complexity. Published a paper at ALIFE 2025 in Kyoto, Japan.",
+    date: "Sep 2024 - May 2025",
+  },
+  {
+    title: "Oak Ridge National Laboratory Internship: Detecting Adversarial Images",
     desc: "Developed a complex system to detect adversarial images using the Fourier Transform, and developed a deep understanding of how neural networks work.",
     date: "Jun-Jul 2024",
   },

@@ -9,7 +9,7 @@ export default function MainPage() {
           <div className="MainPage-desc">
             Welcome to my website! Visit any of the below pages to get to
             know me! Disclaimer: this was made in high school (about 2 years ago) 
-            and does not fully represent me now, as senior college student. A newer 
+            and does not fully represent me now, as a senior college student. A newer 
             website is under construction.
           </div>
         </div>
